@@ -1,8 +1,10 @@
 import OpenAI from "openai";
+import { config } from "dotenv";
+
+config();
 
 const openai = new OpenAI({
-  apiKey:
-    "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",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 // Grade writing task using ChatGPT
